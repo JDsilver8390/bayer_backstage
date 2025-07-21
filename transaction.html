@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>我的交易|晶嶼消費者後台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="robots" content="None, Noimageindex,Noarchive">
+  <meta name="description" content="晶嶼科技-用戶交易資料與訂單配送進度搜尋。">
+  <!-- Font type -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700" rel="stylesheet">
+  <!-- browser thumbnail -->
+  <link rel="shortcut icon" href="share/Logo.png">
+  <link rel="apple-touch-icon" href="share/Logo.png">
+  <link rel="stylesheet" href="uikit_3.6.22/uikit-pn.min.css">
+  <!-- page css -->
+  <link rel="stylesheet" href="css/share.css">
+  <link rel="stylesheet" href="css/transaction.css">
+</head>
+
+<body class="scrollbar">
+<header class="header bg-lnrO uk-text-center sdw-d">
+  <img src="images/trade.png" alt="">
+  <h1 class="tx-w">我的交易</h1>
+</header>
+
+<nav class="bg-lk uk-light uk-text-center scrollbar"></nav>
+
+<main id="main">
+
+  <div class="scr-nav">
+    <div class="uk-navbar-nav">
+      <div class="easyQuery">
+        <form class="uk-grid-small uk-form-horizontal" uk-grid >
+          <div class="serchName">
+            <p>交易時間:</p>
+          </div>
+          <div>
+            <div uk-form-custom="target: > * > span:first-child">
+              <select class="uk-select">
+                <option value="1">2022</option>
+                <option value="2">2021</option>
+                <option value="3">2020</option>
+              </select>
+              <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+          </div>
+          <div><p>年</p></div>
+          <div>
+            <div uk-form-custom="target: > * > span:first-child">
+              <select class="uk-select">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="1">04</option>
+                <option value="2">05</option>
+                <option value="3">06</option>
+                <option value="1">07</option>
+                <option value="2">08</option>
+                <option value="3">09</option>
+                <option value="1">10</option>
+                <option value="2">11</option>
+                <option value="3">12</option>
+              </select>
+              <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+              </button>
+            </div>
+          </div>
+          <div><p>月</p></div>
+        </form>
+      </div>
+      <div class="uk-inline">
+        <button class="uk-button uk-button-default uk-button-small rds5 searchBtn">篩選查詢</button>
+        <div uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-top-small; duration: 300; ">
+          <div class="uk-card bg-w sdw uk-padding-small rds15">
+            <h4 class="uk-text-center uk-text-bold">進階篩選查詢</h4>
+            <form class="uk-form-horizontal" action="" method="">
+            <div class="uk-child-width-1-2@s" uk-grid>
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="form-horizontal-text">合作商訂單編號</label>
+                <div class="uk-form-controls">
+                  <input class="uk-input " id="form-horizontal-text" type="text" placeholder="" />
+                </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light " for="form-horizontal-text">付款方式</label>
+                <div class="uk-form-controls uk-light">
+                  <select class="uk-select bg-lk tx-w" id="form-horizontal-select">
+                    <option>請選擇</option>
+                    <option>信用卡一次付清</option>
+                    <option>信用卡分期</option>
+                    <option>ATM轉帳</option>
+                    <option>現金</option>
+                    <option>行動支付</option>
+                  </select>
+                </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="form-horizontal-text">晶嶼科技訂單編號</label>
+                <div class="uk-form-controls">
+                  <input class="uk-input" id="form-horizontal-text" type="text" placeholder="" />
+                </div>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="uk-text-center uk-margin-remove-bottom YesNo">
+              <button class="uk-button uk-button-default rds50 uk-margin-small-bottom" type="reset">清除全部</button>
+              <button class="uk-button pn-btn-main rds50 uk-margin-small-bottom" type="submit">確定查詢</button>
+            </p>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="overview uk-text-center uk-margin-large">最多顯示2年內資料</h3>
+  <div>
+    <div class="uk-overflow-auto scrollbar scrollR tableBox uk-align-center sdw">
+     <table class="uk-table uk-table-small uk-table-striped bg-w">
+      <thead>
+        <tr class="pn-bgO">
+          <th class="tiWidth-2">詳情</th>
+          <th>交易日期</th>
+          <th>商店名稱</th>
+          <th class="tiWidth-4">交易金額</th>
+          <th>物流編號</th>
+          <th>合作商訂單編號</th>
+          <th class="tiWidth-4">付款方式</th>
+          <th class="tiWidth-4">交易狀態</th>
+          <th class="tiWidth-4">交易通路</th>
+          <th>發票號碼</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td>無使用晶嶼物流</td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>現金</td>
+          <td>付款成功</td>
+          <td>實體店面</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>雲穀寵物館</td>
+          <td class="tx-r">111,800</td>
+          <td class="tx-b"><a href="#cargo_stat" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>信用卡</td>
+          <td>付款成功</td>
+          <td class="tx-p">POHA商城</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td class="tx-b"><a href="#cargo_stat_error" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>貨到付款</td>
+          <td class="tx-r">尚未付款</td>
+          <td class="pn-textO">晶嶼網購</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td>無使用晶嶼物流</td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>信用卡分期 2期1%</td>
+          <td class="tx-r">尚未付清</td>
+          <td>實體店面</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>聚創匯餐飲集團</td>
+          <td class="tx-r">1222,800</td>
+          <td class="tx-b"><a href="#cargo_stat" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>TAM</td>
+          <td>付款成功</td>
+          <td class="tx-p">POHA商城</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td>無使用晶嶼物流</td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>現金</td>
+          <td>付款成功</td>
+          <td>實體店面</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>域界綜合文具選品社</td>
+          <td class="tx-r">1,800</td>
+          <td class="tx-b"><a href="#cargo_stat" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>信用卡</td>
+          <td>付款成功</td>
+          <td class="tx-p">POHA商城</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td class="tx-b"><a href="#cargo_stat" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>貨到付款</td>
+          <td class="tx-r">尚未付款</td>
+          <td class="pn-textO">晶嶼網購</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>品研工坊</td>
+          <td class="tx-r">1,800</td>
+          <td>無使用晶嶼物流</td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>現金</td>
+          <td>付款成功</td>
+          <td>實體店面</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+        <tr>
+          <td><a uk-icon="more-vertical" uk-toggle="target: #det-cnt"></a></td>
+          <td>2021/9/9 18:54:20</td>
+          <td>星樞點耀精品企業</td>
+          <td class="tx-r">1,800</td>
+          <td class="tx-b"><a href="#cargo_stat" uk-toggle>ABCD0074195275332351</a></td>
+          <td class="uk-text-bold">1234567890123</td>
+          <td>信用卡</td>
+          <td>付款成功</td>
+          <td class="tx-p">POHA商城</td>
+          <td class="tx-g">CC52193503</td>
+        </tr>
+      </tbody>
+     </table>
+    </div>
+
+    <div class="bookmark uk-align-center">
+      <ul class="uk-pagination uk-flex-center" uk-margin>
+        <li><a href="#"><span uk-pagination-previous></span></a></li>
+        <li><a href="#">1</a></li>
+        <li class="uk-disabled"><span>...</span></li>
+        <li><a href="#">5</a></li>
+        <li class="uk-active"><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li class="uk-disabled"><span>...</span></li>
+        <li><a href="#"><span>10</span></a></li>
+        <li><a href="#"><span uk-pagination-next></span></a></li>
+      </ul>
+      <div class="uk-position-center-left">
+        <span>共:100筆/總頁數:10</span>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<div id="det-cnt" uk-offcanvas="flip: true; overlay: true">
+  <div class="uk-offcanvas-bar scrollbar">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <ul uk-accordion="multiple: true">
+      <li class="uk-open">
+        <a class="uk-accordion-title pn-bgO tx-w uk-padding-small " href="#">交易資訊</a>
+        <div class="uk-accordion-content uk-margin-remove-top">
+          <table class="uk-table uk-table-divider uk-table-small">
+            <tbody>
+              <tr>
+                <th>合作商訂單編號</th>
+                <td class="uk-text-bold">1234567890123</td>
+              </tr>
+              <tr>
+                <th>交易通路</th>
+                <td>實體商店</td>
+              </tr>
+              <tr>
+                <th>交易商店</th>
+                <td>品研工坊</td>
+              </tr>
+
+              <tr>
+                <th>交易日期</th>
+                <td>2021/10/13 18:43:41</td>
+              </tr>
+              <tr>
+                <th>交易金額(含稅)</th>
+                <td class="tx-r">NT$18,0000 </td>
+              </tr>
+              <tr>
+                <th>付款方式</th>
+                <td>信用卡  3期 1%</td>
+              </tr>
+              <tr>
+                <th>交易狀態</th>
+                <td>分期付款尚未繳清 <button uk-toggle="target:#apply_rfd">申請退款</button></td>
+              </tr>
+              <tr>
+                <th>統一編號</th>
+                <td>12345678</td>
+              </tr>
+              <tr>
+                <th>發票號碼</th>
+                <td class="tx-g">CC52193503</td>
+              </tr>
+              <tr>
+                <th>發票中獎</th>
+                <td class="tx-r">五獎</td>
+              </tr>
+              <tr>
+                <th>購買證明</th>
+                <td><a href="Inv_proof.html" target="_blank"><button>購買證明</button></a></td>
+              </tr>
+              <tr>
+                <th>備註</th>
+                <td>交易備註內容交易備註內容交易備註內容交易備註內容交易備註內容交易備註內容</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="uk-open">
+        <a class="uk-accordion-title pn-bgO tx-w uk-padding-small" href="#">物流資訊</a>
+        <div class="uk-accordion-content uk-margin-remove-top">
+          <table class="uk-table uk-table-divider uk-table-small">
+            <tbody>
+              <tr>
+                <th>配送方式</th>
+                <td>晶嶼物流</td>
+              </tr>
+              <tr>
+                <th>物流單號</th>
+                <td class="uk-text-bold">ABCD0074195275332351</td>
+              </tr>
+              <tr>
+                <th>出貨日期</th>
+                <td class="tx-g">2021/07/12</td>
+              </tr>
+              <tr>
+                <th>收件地址</th>
+                <td>收件地址內容收件地址內容收件地址內容收件地址內容收件地址內容收件地址內容收件地址內容</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="uk-open">
+        <a class="uk-accordion-title pn-bgO tx-w uk-padding-small" href="#">商品明細</a>
+        <div class="uk-accordion-content uk-margin-remove-top">
+          <div>
+            <div class="proName uk-padding-small">冬季特製款-新潮流針織套頭圓領衫</div>
+            <div class="proCnt uk-padding-small" uk-grid>
+              <div class="uk-width-1-2 uk-width-1-5@s">數量: 212000</div>
+              <div class="uk-width-1-2 uk-width-1-5@s tx-r">單價: 150000</div>
+              <div class="uk-width-3-5@s">規格: 紅色 窄版 2XL </div>
+            </div>
+          </div>
+          <div>
+            <div class="proName uk-padding-small">超實惠結實拉門衣櫃</div>
+            <div class="proCnt uk-padding-small" uk-grid>
+              <div class="uk-width-1-2 uk-width-1-5@s">數量: 212000</div>
+              <div class="uk-width-1-2 uk-width-1-5@s tx-r">單價: 150000</div>
+              <div class="uk-width-3-5@s">規格: 橡木色 3x6尺 </div>
+            </div>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--load html start-->
+  <footer></footer>
+<!--load html end-->
+
+  <figure id="apply_rfd" class="uk-flex-top uk-modal-container form_md" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rds15">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+        <form class="uk-form-horizontal" id="ref_apply" action="#" method="">
+          <div class="uk-child-width-1-2@s" uk-grid>
+            <div>
+              <div class="inputBox">
+              <label class="uk-form-label uk-light" for="form-horizontal-text">合作商訂單編號</label>
+              <div class="uk-form-controls">
+                <p id="">1234567890123</p>
+              </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="inputBox">
+              <label class="uk-form-label uk-light " for="form-horizontal-text">申請日期</label>
+              <div class="uk-form-controls">
+                <p id="">2022/01/30</p>
+              </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="inputBox">
+              <label class="uk-form-label uk-light" for="form-horizontal-text">退款金額</label>
+              <div class="uk-form-controls">
+                <p id="" class="tx-r">NT10,000</p>
+              </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="inputBox">
+              <label class="uk-form-label uk-light" for="form-horizontal-text">付款方式</label>
+              <div class="uk-form-controls">
+                <p id="" class="">信用卡 / ATM</p>
+              </div>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1@s">
+              <div class="txArea">
+              <label class="uk-form-label uk-light" for="form-horizontal-text">申請退款原因</label>
+              <div class="uk-form-controls">
+                <textarea class="uk-textarea" rows="3" placeholder="請輸入退款原因(最多75字)" maxlength="75" id="" required></textarea>
+              </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="uk-text-center uk-margin-remove-bottom YesNo">
+            <button class="uk-button uk-button-default rds50 uk-margin-small-bottom" type="reset">清除全部</button>
+            <button class="uk-button pn-btn-main rds50 uk-margin-small-bottom" type="snbmit" id="">確定申請</button>
+          </p>
+        </form>
+    </div>
+  </figure>
+
+  <figure id="cargo_stat" class="uk-flex-top uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rds15">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h2 class="uk-text-center">物流狀態</h2>
+      <div class="rds15 sdw uk-padding-small">
+        <div class="uk-child-width-1-2@l uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-child-width-1-2@s" uk-grid>
+              <div>
+                <p><span uk-icon="icon: file-text"></span>合作商訂單編號：<span class="uk-text-bold">000000000000</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: calendar"></span>訂單日期：<span class="tx-g">2021-10-30</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: cart"></span>訂單通路：<span>POHA商城</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: star"></span>訂單金額：<span class="tx-r">18,0000</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: credit-card"></span>付款方式：<span>信用卡</span></p>
+              </div>
+            </div>
+            <p><span uk-icon="icon: location"></span>收貨資訊：<br><span>7-11新山店:新北市板橋區新山路三段207號</span></p>
+          </div>
+          <div class="stepBox uk-text-center uk-flex-middle uk-child-width-1-5" uk-grid>
+            <div id="step1">
+              <div class="step"></div>
+              <p class="pn-textO">成立訂單</p>
+            </div>
+            <div id="step2">
+              <div class="step"></div>
+              <p class="tx-gr">備貨</p>
+            </div>
+            <div id="step3">
+              <div class="step"></div>
+              <p class="tx-gr">配送中</p>
+            </div>
+            <div id="step4">
+              <div class="step"></div>
+              <p class="tx-gr">已送達</p>
+            </div>
+            <div id="step5">
+              <div class="step"></div>
+              <p class="tx-gr">取貨完成</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <figure id="cargo_stat_error" class="uk-flex-top uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rds15">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h2 class="uk-text-center">物流狀態</h2>
+      <div class="rds15 sdw uk-padding-small">
+        <div class="uk-child-width-1-2@l uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-child-width-1-2@s" uk-grid>
+              <div>
+                <p><span uk-icon="icon: file-text"></span>合作商訂單編號：<span class="uk-text-bold">000000000000</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: calendar"></span>訂單日期：<span class="tx-g">2021-10-30</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: cart"></span>訂單通路：<span>POHA商城</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: star"></span>訂單金額：<span class="tx-r">18,0000</span></p>
+              </div>
+              <div>
+                <p><span uk-icon="icon: credit-card"></span>付款方式：<span>信用卡</span></p>
+              </div>
+            </div>
+            <p><span uk-icon="icon: location"></span>收貨資訊：<br><span>7-11新山店:新北市板橋區新山路三段207號</span></p>
+          </div>
+          <div class="stepBox uk-text-center uk-flex-middle uk-child-width-1-5" uk-grid>
+            <div id="step1">
+              <div class="step"></div>
+              <p class="pn-textO">成立訂單</p>
+            </div>
+            <div id="step2">
+              <div class="step"></div>
+              <p class="pn-textO">備貨</p>
+            </div>
+            <div id="step3">
+              <div class="step"></div>
+              <p class="pn-textO">配送中</p>
+            </div>
+            <div class="error">
+              <div class="step"></div>
+              <p class="tx-r">出貨異常</p>
+            </div>
+            <div id="step5">
+              <div class="step"></div>
+              <p class="tx-gr">取貨完成</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+
+  <!--   framework script -->
+  <script src="uikit_3.6.22/uikit-pn.min.js"></script>
+  <script src="uikit_3.6.22/uikit-icons-pn.min.js"></script>
+  <!-- jqurey -->
+  <script src="share/jquery-3.6.0.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    //load .html
+    $('nav').load('share/nav.html');
+    $('footer').load('share/footer.html');
+  });
+  </script>
+
+  <script>
+    document.getElementById("ref_apply").addEventListener("submit", showOK);
+      function showOK() {
+        $('#apply_rfd .uk-modal-dialog').hide();
+
+        /*var modal = UIkit.modal("#apply_rfd");
+        modal.hide();*/
+
+//        window.location.reload();
+//        history.go(0);
+
+        var notify = UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> 已送出退款申請', status: 'success'});
+//        var notify = UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> 已送出退款申請', status: 'success',timeout:'1500'});
+
+        setTimeout(function(){undefined
+          window.location.reload();//刷新当前页面.
+        },2000)
+
+      }
+  </script>
+
+  <body>
+<html>

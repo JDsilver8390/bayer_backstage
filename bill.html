@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>帳單|晶嶼科技</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="robots" content="None, Noimageindex,Noarchive">
+  <!-- Font type -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700" rel="stylesheet">
+  <!-- browser thumbnail -->
+  <link rel="shortcut icon" href="share/Logo.png">
+  <link rel="apple-touch-icon" href="share/Logo.png">
+  <!-- framework css -->
+  <link rel="stylesheet" href="uikit_3.6.22/uikit-pn.min.css">
+  <!-- page css -->
+  <link rel="stylesheet" href="css/bill.css">
+
+</head>
+
+<body class="scrollbar">
+
+<header class="header sdw-d uk-padding-small uk-text-center bg-w">
+  <img src="share/Logo.png" alt="" style="max-width:40px;">
+  <h1 class="uk-text-bold uk-inline"><i>晶嶼 電子帳單(E-Payment)</i></h1>
+</header>
+
+<main>
+  <form class="uk-container bg-b-fog rds30 Center uk-padding-small" id="ePayment-form" name="ePayment-form" action="#" method="" >
+
+  <div class="container">
+    <h3 class="uk-text-center uk-heading-line"><span><span uk-icon="world"></span>消費者資訊</span></h3>
+    <div uk-grid>
+      <div class="uk-width-2-5@s">網站名稱</div>
+      <div class="uk-width-3-5@s">域界綜合文具選品社</div>
+
+      <div class="uk-width-2-5@s">合作商訂單編號</div>
+      <div class="uk-width-3-5@s">1234567891234</div>
+
+      <div class="uk-width-2-5@s">客服電話</div>
+      <div class="uk-width-3-5@s">0212345678</div>
+
+      <div class="uk-width-2-5@s">客服信箱</div>
+      <div class="uk-width-3-5@s">hollewery@yahoo.com.tw</div>
+
+      <div class="uk-width-2-5@s">賣家訂單日期</div>
+      <div class="uk-width-3-5@s">2021/08/01</div>
+
+      <div class="uk-width-2-5@s">賣家出貨天數</div>
+      <div class="uk-width-3-5@s" style="color: brown">出貨資訊: ** 當交易成功後，10天內未收到貨，我有權利申請退款 **</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="uk-text-center uk-heading-line"><span><span uk-icon="cart"></span>填寫訂購人資訊</span></h3>
+    <div class="uk-margin" uk-grid>
+
+      <div class="uk-width-2-5@s">訂購人姓名 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo">
+        <input class="uk-input" type="text" placeholder="請輸入訂購人姓名" id="orderer-name" name="orderer-name" required />
+      </div>
+
+      <div class="uk-width-2-5@s">訂購人手機電話 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo">
+        <input class="uk-input" type="tel" placeholder="請輸入訂購人手機電話" id="orderer-mobile-phone" name="orderer-mobile-phone" required />
+      </div>
+
+      <div class="uk-width-2-5@s">訂購人聯絡信箱 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo">
+        <input class="uk-input" type="email" placeholder="請輸入訂購人聯絡信箱" id="orderer-email" name="orderer-email" required />
+      </div>
+
+      <div class="uk-width-2-5@s">訂單金額</div>
+      <div class="uk-width-3-5@s">NT$1,000</div>
+
+      <div class="uk-width-2-5@s">訂單資料</div>
+      <div class="uk-width-3-5@s">
+      原子筆（藍色）/ A4資料夾（透明）/ 鉛筆 HB（10入）/ 美工刀 + 替刃組 / 打洞機（小型）/ 便利貼（多色）
+      </div>
+
+      <div class="uk-width-2-5@s">價金信託說明</div>
+      <div class="uk-width-3-5@s" style="color: brown">此賣家自行處理貨物遞送。交易成功後10天內我有權利申請退貨退款。</div>
+
+      <div class="uk-width-2-5@s">自動扣繳期數</div>
+      <div class="uk-width-3-5@s" style="color: brown">3期 0%</div>
+
+    </div>
+  </div>
+
+  <div class="container uk-margin-large">
+    <div class="uk-margin-small uk-text-center receive">
+      <h3 class="uk-heading-line"><span><span uk-icon="bell"></span>填寫收件人</span></h3>
+      <input class="uk-checkbox brd-k" type="checkbox">同訂購人
+    </div>
+    <div class="uk-margin" uk-grid>
+
+      <div class="uk-width-2-5@s">收件人姓名 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo">
+        <input class="uk-input" type="text" placeholder="請輸入收件人姓名" id="recipient" name="recipient" required />
+      </div>
+      <div class="uk-width-2-5@s">收件人聯絡電話 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo">
+        <input class="uk-input" type="tel" placeholder="請輸入收件人聯絡電話" id="recipient-phone" name="recipient-phone" required />
+      </div>
+
+      <div class="uk-width-2-5@s">送件地址 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo uk-light" style="background-color: #ddd">
+        <lable>縣市:</lable>
+        <select class="uk-select" id="counties-cities" name="counties-cities" required>
+          <option value="0">請選擇</option>
+          <option value="counties1">縣市1</option>
+        </select>
+        <lable>鄉鎮市區:</lable>
+        <select class="uk-select" id="township" name="township" required>
+          <option value="0">請選擇</option>
+          <option value="township1">鄉鎮1</option>
+        </select>
+        <lable>街道:</lable>
+        <select class="uk-select" id="street" name="street" required>
+          <option value="0">請選擇</option>
+          <option value="street1">街道1</option>
+        </select>
+        <lable>門牌號範圍:</lable>
+        <select class="uk-select" id="house-number" name="house-number" required>
+          <option value="0">請選擇</option>
+          <option value="number1">門牌1</option>
+        </select>
+      </div>
+
+      <div class="uk-width-2-5@s">是否記錄此次收件人資料</div>
+      <div class="uk-width-3-5@s">
+        <input class="uk-checkbox brd-k" type="checkbox" id="" name="" />要記錄
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="uk-text-center uk-heading-line"><span><span uk-icon="credit-card"></span>選擇付款方式</span></h3>
+    <div uk-grid>
+      <div class="uk-width-2-5@s">付款方式 (必填)<em>*</em></div>
+      <div class="uk-width-3-5@s pdnNo uk-light">
+        <select class="uk-select" id="payment-method" name="payment-method" required>
+          <option value="0">請選擇付款方式</option>
+          <option value="1">方式1</option>
+          <option value="2">方式2</option>
+          <option value="3">方式3</option>
+          <option value="4">方式3</option>
+          <option value="5">方式3</option>
+          <option value="6">方式3</option>
+          <option value="7">方式3</option>
+          <option value="8">方式3</option>
+          <option value="9">方式3</option>
+          <option value="7">方式3</option>
+          <option value="8">方式3</option>
+          <option value="9">方式3</option>
+          <option value="7">方式3</option>
+          <option value="8">方式3</option>
+          <option value="9">方式3</option>
+          <option value="7">方式3</option>
+          <option value="8">方式3</option>
+          <option value="9">方式3</option>
+          <option value="10">方式10方式10方式10方式10方式10方式10</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+    <div class="btnBox uk-text-center">
+      <button class="pn-button pn-btn-gr sdw" onclick="window.location='E-Payment.html'" type="button">取消返回</button>
+      <button class="pn-button pn-btn-main sdw" type="submit" id="template-contactform-submit" name="template-contactform-submit">確定付款</button>
+    </div>
+  </form>
+</main>
+
+<footer id="footer" class="uk-padding-small uk-text-center pn-bgO">
+  <p class="tx-w uk-margin-remove">晶嶼科技有限公司版權所有</p>
+</footer>
+
+<!-- ok modal -->
+<figure id="modal-ok" uk-modal="bg-close:false" style="margin:0">
+  <div class="uk-modal-dialog uk-modal-body">
+    <p class="tx-g">繳款成功!</p>
+    <p class="uk-text-right">
+      <a href="E-Payment.html"><button class="uk-button uk-button-primary" type="button">確認</button></a>
+    </p>
+  </div>
+</figure>
+
+
+<!--   framework script -->
+<script src="uikit_3.6.22/uikit-pn.min.js"></script>
+<script src="uikit_3.6.22/uikit-icons-pn.min.js"></script>
+<!-- jqurey -->
+<script src="share/jquery-3.6.0.min.js"></script>
+<script src="plugins/jquery.validate.min.js"></script>
+
+<script>
+  document.getElementById("ePayment-form").addEventListener("submit", showOK);
+    function showOK() {
+      var modal = UIkit.modal("#modal-ok");
+      modal.show();
+    }
+</script>
+
+<script>
+  //尚未設定
+  $.validator.setDefaults({
+    submitHandler: function() {
+      $('#template-contactform-submit').attr("disabled","true"); //Prevent duplicate submissions
+      var modal = UIkit.modal("#modal-ok");
+      modal.show();
+    }
+  });
+
+  $().ready(function() {
+    // validate signup form on keyup and submit
+    $("#ePayment-form").validate({
+      rules: {
+        ctl00$ContentPlaceHolder1$txt_username: {
+          required: true,
+          Chinese: true,
+          minlength:"2",
+        },
+        ctl00$ContentPlaceHolder1$txt_userid_FIRM: {
+          required: true,
+          digits: true,
+          rangelength: [8, 8],
+          guiNB: true,
+          remote: "JoinusCompany.aspx",
+        },
+        ctl00$ContentPlaceHolder1$txt_userid_ONE: {
+          required: true,
+          IDcard: true,
+          IDCard: true,
+          remote: "JoinusCompany.aspx",
+        },
+        ctl00$ContentPlaceHolder1$txt_tax: {
+          required: true,
+          rangelength: [9, 9],
+          onChinese: true,
+        },
+        ctl00$ContentPlaceHolder1$txt_tel: {
+          required: true,
+          Landline: true,
+        },
+        ctl00$ContentPlaceHolder1$txt_emailcontact: {
+          required: true,
+          email: true
+        },
+        ctl00$ContentPlaceHolder1$txt_telpcontact: {
+          required: true,
+          twMobilePhone: true,
+        },
+        ctl00$ContentPlaceHolder1$txt_telcontact: {
+          Landline: true,
+        },
+        ctl00$ContentPlaceHolder1$txt_fax: {
+          Landline: true,
+        },
+        ctl00$ContentPlaceHolder1$txt_nameregist: {
+          required: true,
+          Chinese: true,
+          minlength:"2",
+        },
+        ctl00$ContentPlaceHolder1$txt_nameContact:{
+          required: true,
+          Chinese: true,
+          minlength:"2",
+        },
+        ctl00$ContentPlaceHolder1$ddl_City: "required",
+        ctl00$ContentPlaceHolder1$ddl_Area: "required",
+        ctl00$ContentPlaceHolder1$ddl_Road: "required",
+        ctl00$ContentPlaceHolder1$ddl_Rno: "required",
+        ctl00$ContentPlaceHolder1$txt_idregist: {
+          required: true,
+          IDcard: true,
+          IDCard: true,
+        },
+        ctl00$ContentPlaceHolder1$ddl_mcc: "required",
+        ctl00$ContentPlaceHolder1$txt_password: {
+          required: true,
+          noChinese: true,
+          rangelength: [8, 20],
+        },
+        ctl00$ContentPlaceHolder1$txt_password_again: {
+          required: true,
+          equalTo: "#ContentPlaceHolder1_txt_password"
+        },
+        ctl00$ContentPlaceHolder1$ddl_BankType: "required",
+        ctl00$ContentPlaceHolder1$ddl_BankCode: "required",
+        ctl00$ContentPlaceHolder1$ddl_BranchCode: "required",
+        ctl00$ContentPlaceHolder1$txt_bankaccountno: {
+          required: true,
+          rangelength: [8, 16],
+          digits: true
+        },
+        IsReaded: "required",
+      },
+      messages: {
+        ctl00$ContentPlaceHolder1$txt_username: {
+          minlength:"名稱長度過短",
+        },
+        ctl00$ContentPlaceHolder1$txt_userid_FIRM: {
+          digits: "統編為數字",
+          rangelength: "統編長度8碼",
+        },
+        ctl00$ContentPlaceHolder1$txt_tax: {
+          rangelength:"稅籍編號格式不正確",
+        },
+        ctl00$ContentPlaceHolder1$txt_fax: {
+          Landline:"傳真格式不正確",
+        },
+        ctl00$ContentPlaceHolder1$txt_nameregist: {
+          minlength:"姓名至少2個字",
+        },
+        ctl00$ContentPlaceHolder1$txt_nameContact: {
+          minlength:"姓名至少2個字",
+        },
+        ctl00$ContentPlaceHolder1$ddl_City: "居住縣市為必選",
+        ctl00$ContentPlaceHolder1$ddl_Area: "先選擇縣市再選擇此項",
+        ctl00$ContentPlaceHolder1$ddl_Road: "先選擇區域再選擇此項",
+        ctl00$ContentPlaceHolder1$ddl_Rno: "先選擇路名再選擇此項",
+        ctl00$ContentPlaceHolder1$ddl_mcc: "商品為必選",
+        ctl00$ContentPlaceHolder1$txt_password: {
+          rangelength:"密碼長度8-20碼"
+        },
+        ctl00$ContentPlaceHolder1$txt_password_again: {
+          equalTo:"請重複相同密碼"
+        },
+        ctl00$ContentPlaceHolder1$ddl_BankType: "匯款機構為必選",
+        ctl00$ContentPlaceHolder1$ddl_BankCode: "先選擇機構再選擇此項",
+        ctl00$ContentPlaceHolder1$ddl_BranchCode: "先選擇銀行再選擇此項",
+        ctl00$ContentPlaceHolder1$txt_bankaccountno: {
+          rangelength: "帳號長度不正確",
+        },
+        IsReaded: "請勾選同意會員條款",
+      }
+    });
+
+  });
+</script>
+
+
+</body>
+</html>

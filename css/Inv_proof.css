@@ -1,0 +1,96 @@
+.all {max-width: 1080px; margin: auto;}
+  .title h4{display: inline-block;float: right;line-height: 40px;color:#649719 }
+  .logo {width: 100px;float: right;margin: 5px 0;}
+  .main {
+    border:3px solid #649719; margin: 40px 0 10px 0;
+    padding: 10px;
+    width: 1085px; 
+    clear: both;
+  }
+  p {
+    word-break:break-all; word-wrap:break-word;
+  }
+  hr {margin: 0 10px}
+  
+/*  發票區 ==========*/
+  .invoice{
+    width:200px;
+    margin:15px;
+    border:2px dashed #8e8e8e;
+    padding: 10px;
+    text-align:center; 
+  }
+    .*/style15 {
+        color: Black;
+        font-size: medium;
+    }
+    .style16 {
+        font-size: larger;
+        color: black;
+    }
+    .style17 {
+        color: Black;
+        font-size: x-large;
+    }
+    .style18 {
+        color: Black;
+        font-size: x-large;
+    }
+    .style19 {
+        color: #000000;
+        font-size: smaller;
+    }
+    .style20 {
+        color: Black;
+        font-size: 20px;
+    }
+    table {  
+        border-collapse: collapse; 
+    }
+
+/*  明細區 ==========*/  
+  .left {    
+    min-width: 800px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border:3px solid #8e8e8e;
+  }
+  .detail{
+    padding:10px; 
+    min-width: 1060px;
+    min-height: 200px;
+    text-align:center; 
+  }  
+  p {font-size: 0.8em;margin: 5px;}
+  h3, h4 {margin: 2px;}
+  .detail h3{background-color:#ededed;padding: 10px;color:#649719}
+  .number{text-align: left;margin-bottom: 5px}
+  
+  .detailBox {border:1px solid #8e8e8e;min-height:200px;}
+  
+  .detailLi1{margin-bottom: 5px}
+  .detailLi1 h4 {display: inline-block;}
+  
+  .detailPro1{min-width: 700px; text-align: left; }
+  .detailPro2{min-width: 110px; text-align: right;}
+
+  .detailP1{width:650px;text-align: left;margin-right: 50px;e}
+  .detailP2{width:100px;text-align: right;}
+
+  .detailContent {min-height:170px;}
+  .detailContent2 {padding: 10px}
+  .detailLi3 {text-align: right;}
+
+  .detailLi2{
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between ;
+    width: 100%;
+  }
+  
+  .detailLi3 p {line-height: 5px;text-align: right;display: inline-block;min-width: 50px;}
+
+  /* 提醒文字 ==========*/
+  .remind{
+    float: right;margin-right: 10px;
+  }

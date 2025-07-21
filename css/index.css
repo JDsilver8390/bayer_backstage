@@ -1,0 +1,173 @@
+/*all =======*/
+section h3 span{font-size: .7em;color:#777;}
+section h3{margin-bottom: 0;}
+#main{min-height: 0;padding-bottom: 0}
+#footer{
+  position: relative;
+  float: right;
+}
+a[uk-slider-item]{
+  background-color: rgba(0, 0, 0, 0.4);border-radius: 10px;
+}
+
+/*header =======*/
+.headerBig{
+  padding: 50px 10px;
+  width: 80%;margin: 30px 2% 50px 2%;
+  float: right;
+  display: flex;align-items: center;justify-content: center;
+  background: url("../images/bg_main.jpg") center / cover ;
+}
+.headerBig h1{font-size: 5rem}
+
+/*sec01 ========*/
+.sec01 .scope{padding-bottom: 20px;}
+/*table */
+#main .tableBox{
+  width: auto;
+  max-height: 450px;
+  border-radius: 20px 20px 0 0;
+}
+.sec01 .uk-table{min-width: 750px}
+.tiWidth-2{min-width: 35px}
+.tiWidth-4{min-width: 70px}
+
+/*sec02 ========*/
+.sec02 .scope{
+  width: 90%;
+  background: url("../images/bg_03.jpg") center / cover ;
+}
+.sec02 .listBox{
+  width: auto;
+  max-height: 400px;
+  overflow: auto;
+}
+.listBox p{margin: 0;}
+.listCont{
+  min-width: 320px;
+  margin: 10px 0;
+  display:flex; align-items: stretch;
+}
+.projectM{width: 50%;min-width: 130px}
+.projectS{width: 50%;min-width: 90px}
+
+/*Status icon */
+.procImg, .yesImg, .noImg{
+  background:center / 100% no-repeat;
+  width: 80px;height: 80px;
+}
+.procImg{background-image: url(../images/procImg.svg)}
+.yesImg{background-image: url(../images/yesImg.svg)}
+.noImg{background-image: url(../images/noImg.svg)}
+
+/*sec03 ========*/
+.sec03 .uk-overflow-auto{max-height: 430px;padding: 0 5px}
+.sec03 .brd-o{
+  max-width: 400px;
+  margin: 0px auto 20px auto;
+}
+.sec03 p{margin: 0;}
+.sec03 h4{margin-top: 20px}
+
+.bg-win{
+  background: url("../images/bg_02.jpg") center / cover ;
+}
+
+/*sec04 ========*/
+.sec04 .sliderBox{margin-right: 40px;}
+.sec04 .uk-card-body{padding: 10px}
+.sec04 h4{height: 55px;line-height: 1.2;overflow: hidden;margin-bottom: 10px}
+.sec04 p{
+  overflow: hidden;min-height: 80px;
+  margin: 10px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.shops{min-height: 80px}
+.sec04 li{width: 320px;}
+.shops a{
+  margin: 5px;
+  white-space:nowrap;
+}
+.sec04 img{width: 100%;aspect-ratio: 6/4;}
+
+/*sec05 ========*/
+.sec05{
+  background: url("../images/bg_05.jpeg") center / cover ;
+}
+.sec05 div[uk-slider]{max-width: 1600px;width: 85%;margin: 20px auto;}
+.sec05 .uk-panel{cursor: pointer;padding: 10px;text-align: center; }
+.sec05 .uk-overlay{
+  border-radius: 0 0 15px 15px;
+  margin: 0 5% 5% 5%;
+}
+.sec05 img{
+  box-shadow: 0 0 10px #999;
+  width: 350px;
+  aspect-ratio: 4/6;
+}
+
+/*rwd-max */
+@media screen and (max-width:1600px){
+  .headerBig{width: 84%;margin: 30px 2%;}
+  .headerBig h1{font-size: 3.5rem}
+  .sec01 .scope{margin-right: 30px}
+  .sec03 {padding-right: 30px;padding-left: 0}
+  .sec05 img{width: 300px;}
+}
+@media screen and (max-width:1200px){
+  .headerBig{width: 90%;margin: 90px auto 30px auto;float: none;}
+  .headerBig h1{font-size: 5vw}
+  .sec04 .sliderBox{margin-right: 30px;}
+}
+@media screen and (max-width:960px){
+  .sec05 img{width: 250px;}
+  .sec05 li h3{font-size: 1rem}
+  div[uk-slider] .uk-position-center-right-out{
+    right:-25px;
+    left:auto;
+  }
+  div[uk-slider] .uk-position-center-left-out{
+    left:-25px;
+    right:auto;
+  }
+}
+@media screen and (max-width:640px){
+  .headerBig > *{padding-left: 0px;}
+  .headerBig h1{font-size: 10vw}
+  .sec01 .scope {margin-right: 0px;padding: 10px}
+  .sec01 .uk-table{min-width: 650px}
+  .tiWidth-2{min-width: 30px}
+  .tiWidth-4{min-width: 60px}
+  .sec01,.sec02,.sec03{
+    padding-left: 10px;padding-right: 10px
+  }
+  .sec02 .scope {width: 100%;}
+  .sec02 .listBox,
+  .sec02 .scope>div{padding: 10px}
+  .listCont{min-width: 290px;}
+  .procImg, .yesImg, .noImg{
+    width: 60px;height: 60px;
+  }
+  .sec04 li{width: 250px;}
+  .sec04{padding-left: 10px}
+  .sec04 .sliderBox {margin-right: 10px;padding: 15px;}
+  .sec04 p{min-height: 50px}
+}
+@media screen and (max-width:430px){
+  .shops a{line-height: 1.5}
+  .sec04 h4{height: 45px}
+  .sec05{padding-left: 10px;padding-right: 10px;}
+  .sec05 div[uk-slider] {width: 90%;padding: 10px}
+  .sec04 li{width: 80%;}
+  .sec05 li{width: 70%;}
+  .sec05 img{width: 100%;}
+  .sec05 div[uk-slider] .uk-grid > * {padding-left: 20px;}
+}
+@media screen and (max-width:350px){
+  .uk-subnav > * {margin-top: 5px}
+  .uk-overlay {padding: 10px 10px;}
+}
+
+

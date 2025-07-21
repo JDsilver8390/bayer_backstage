@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>成為合作商|晶嶼消費者後台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="robots" content="None, Noimageindex,Noarchive">
+  <meta name="description" content="晶嶼科技-用戶註冊成為合作商">
+  <!-- Font type -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700" rel="stylesheet">
+  <!-- browser thumbnail -->
+  <link rel="shortcut icon" href="share/Logo.png">
+  <link rel="apple-touch-icon" href="share/Logo.png">
+  <!-- framework css -->
+  <link rel="stylesheet" href="uikit_3.6.22/uikit-pn.min.css">
+  <!-- page css -->
+  <link rel="stylesheet" href="css/share.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body class="scrollbar">
+<header class="header bg-lnrO uk-text-center sdw-d">
+  <img src="images/application.png" alt="">
+  <h1 class="tx-w">註冊成為合作商</h1>
+</header>
+
+<nav class="bg-lk uk-light uk-text-center scrollbar"></nav>
+
+<main id="main">
+
+  <section class="sec01 uk-margin-medium-top uk-container uk-light">
+    <div class="uk-align-center rds15 bg-lnrG uk-card-body sdw">
+     <h4>申請成為晶嶼科技合作商，請確實填寫下列資料，以確保您日後享受晶嶼科技所精心設計的各項服務與活動，我們更會秉持合作商資料保護原則。未經您同意絕對不會對外顯露您的資料。</h4>
+    </div>
+  </section>
+
+  <section class="sec02 uk-card-body uk-align-center uk-margin-medium-top">
+   <form id="msform" method="post" action="#" class="uk-padding formbox bg-w sdw rds15 uk-form-horizontal">
+    <h3 class="uk-text-center uk-text-bold">選擇註冊身份</h3>
+    <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade" id="identitys">
+      <li><a href="#" class="rds10" id="tab_p">個人商</a></li>
+      <li><a href="#" class="rds10" id="tab_f">企業商</a></li>
+    </ul>
+
+    <div class="uk-switcher uk-margin-medium-top uk-align-center">
+      <fieldset id="payment_one"></fieldset>
+      <fieldset id="payment_firm"></fieldset>
+    </div>
+
+      <div class="sharedInputs uk-align-center">
+      <fieldset>
+      <legend class="uk-text-center pn-bgO tx-w">密碼設定</legend>
+      <span class="uk-text-danger">「*」為必填</span>
+      <div class="enter">
+        <label class="uk-form-label" for="ContentPlaceHolder1_txt_password"><span class="uk-margin-small-bottom" uk-icon="lock"></span>設定密碼<em>*</em></label>
+        <div class="uk-form-controls">
+          <input class="uk-input" style="padding-right: 30px" id="ContentPlaceHolder1_txt_password" name="ctl00$ContentPlaceHolder1$txt_password" type="password" placeholder="請輸入8~20碼英數字元" required/>
+          <span class="uk-form-icon uk-form-icon-flip uk-icon-image pn_eye" style="" id="eye"></span>
+        </div>
+      </div>
+      <div class="enter">
+        <label class="uk-form-label" for="ContentPlaceHolder1_txt_password_again"><span class="uk-margin-small-bottom" uk-icon="lock"></span>再次確認密碼<em>*</em></label>
+        <div class="uk-form-controls">
+          <input class="uk-input" style="padding-right: 30px" id="ContentPlaceHolder1_txt_password_again" name="ctl00$ContentPlaceHolder1$txt_password_again" type="password" placeholder="請輸入8~20碼英數字元" required/>
+          <span class="uk-form-icon uk-form-icon-flip uk-icon-image pn_eye" style="" id="eye2"></span>
+        </div>
+      </div>
+      </fieldset>
+
+      <fieldset>
+      <legend class="uk-text-center pn-bgO tx-w">交易匯款用帳號設定</legend>
+      <span class="uk-text-danger">「*」為必填</span>
+      <div class="enter">
+      <label class="uk-form-label" for="ContentPlaceHolder1_ddl_BankType"><span class="uk-margin-small-bottom" uk-icon="credit-card"></span>匯款機構<em>*</em></label>
+      <div class="uk-form-controls uk-light">
+        <select class="uk-select" name="ctl00$ContentPlaceHolder1$ddl_BankType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddl_BankType\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddl_BankType" required>
+          <option selected="selected" value="">請選擇</option>
+          <option value="1">國內、外銀行</option>
+          <option value="2">信用合作社</option>
+          <option value="3">國內魚、農會</option>
+          <option value="4">郵政總局</option>
+        </select>
+      </div>
+      </div>
+      <div class="enter">
+      <label class="uk-form-label" for="ContentPlaceHolder1_ddl_BankCode"><span class="uk-margin-small-bottom" uk-icon="credit-card"></span>銀行名稱<em>*</em></label>
+      <div class="uk-form-controls uk-light">
+        <select class="uk-select" name="ctl00$ContentPlaceHolder1$ddl_BankCode" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddl_BankCode\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddl_BankCode" disabled="disabled" required>
+          <option selected="selected" value="">請選擇</option>
+        </select>
+      </div>
+      </div>
+      <div class="enter">
+      <label class="uk-form-label" for="ContentPlaceHolder1_ddl_BranchCode"><span class="uk-margin-small-bottom" uk-icon="credit-card"></span>分行名稱<em>*</em></label>
+      <div class="uk-form-controls uk-light">
+        <select class="uk-select" name="ctl00$ContentPlaceHolder1$ddl_BranchCode" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddl_BranchCode\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddl_BranchCode" disabled="disabled" required>
+          <option selected="selected" value="">請選擇</option>
+        </select>
+      </div>
+      </div>
+      <div class="enter">
+        <label class="uk-form-label" for="ContentPlaceHolder1_lab_bankname"><span class="uk-margin-small-bottom" uk-icon="user"></span>戶名</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="ContentPlaceHolder1_lab_bankname" name="ctl00$ContentPlaceHolder1$lab_bankname" type="text" value="" placeholder="將自動帶入名稱" disabled/>
+        </div>
+      </div>
+      <div class="enter">
+        <label class="uk-form-label" for="ContentPlaceHolder1_txt_bankaccountno"><span class="uk-margin-small-bottom" uk-icon="pencil"></span>帳號(包含分行代碼)<em>*</em></label>
+        <div class="uk-form-controls">
+          <input class="uk-input" name="ctl00$ContentPlaceHolder1$txt_bankaccountno" type="text" maxlength="16" id="ContentPlaceHolder1_txt_bankaccountno" placeholder="不可輸入數字外的字元" required/>
+        </div>
+      </div>
+      </fieldset>
+      </div>
+
+      <div class="uk-alert-primary rds10" uk-alert>
+        <p><span uk-icon="icon: warning"></span>加入會員後，晶嶼科技會立即將您的<span>登入驗證碼</span>寄到所填寫的<span>聯絡人Email</span>，並且以<span>簡訊</span>將您的<span>帳號開通驗證碼</span>發送到申請人的手機上，請務必<span>正確填寫資料</span>！</p>
+      </div>
+
+      <div class="agreement uk-text-center">
+        <input class="uk-checkbox" data-val-required="IsReaded 欄位是必要項。" id="IsReaded" name="IsReaded" type="checkbox" value="true" required/>
+        <input name="IsReaded" type="hidden" value="false" required/>我已閱讀，並同意
+        <a href="" uk-toggle="target: #modal-terms">晶嶼科技合作商條款</a>
+        <img src="share/tw.png" alt="" class="popup-demo">
+        <img src="share/en.png" alt="" class="popup-demo2">
+      </div>
+
+      <!-- Verification code start-->
+      <div class="uk-text-center">
+      <div class="CaptchaBox uk-flex-middle rds15" id="CaptchaBox" uk-grid>
+       <div class="uk-width-1-3@s">
+        <img class="ca" src="/share/GetCaptcha/GetCaptcha.gif" alt="驗證碼"> <a class="bb" uk-icon="icon: refresh"></a>
+       </div>
+       <div class="uk-width-2-3@s uk-form-controls">
+        <label for="Captcha">驗證碼<small>(需分大小寫)</small>:</label>
+        <input class="uk-input uk-width-small" data-val="true" id="Captcha" name="Captcha" type="text" value="" required/>
+       </div>
+      </div>
+      </div>
+      <!-- Verification code end-->
+
+      <div class=" uk-margin-medium-top uk-margin-medium-bottom uk-text-center">
+        <input type="submit" class="pn-button pn-btn-main rds30" name="ctl00$ContentPlaceHolder1$btn_addmem" id="ContentPlaceHolder1_btn_addmem" value="確認註冊">
+      </div>
+   </form>
+  </section>
+
+  <section class="sec03 uk-container uk-text-center Center">
+    <div class="pn-bgY uk-box-shadow-large uk-padding uk-margin-large">
+      <h1><i>~註冊成功！~</i></h1>
+      <hr class="pn-hr2">
+      <h2>恭喜成為晶嶼科技合作商</h2>
+      <h2>請從官網登入合作商後台</h2>
+    </div>
+    <a href="#"><button class="pn-button pn-btn-main bt-sdw rds30">前往登入<span uk-icon="icon: triangle-right"></span></button></a>
+  </section>
+
+</main>
+
+<!--load html start-->
+<footer></footer>
+<!--load html end-->
+
+<!-- 會員條款 modal -->
+<figure id="modal-terms" uk-modal></figure>
+
+  <!--   framework script -->
+  <script src="uikit_3.6.22/uikit-pn.min.js"></script>
+  <script src="uikit_3.6.22/uikit-icons-pn.min.js"></script>
+  <!-- jqurey -->
+  <script src="share/jquery-3.6.0.min.js"></script>
+  <!-- jqurey Plugin-->
+  <script src="plugins/jquery.validate.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    //load .html
+    $('nav').load('share/nav.html');
+    $('footer').load('share/footer.html');
+    $('#modal-terms').load('share/modal-terms.html');
+    $('#payment_one').load('form_content/payment_one.html');
+
+    //Multiple inputs are linked to input the same data
+    $('body').on("blur", "#ContentPlaceHolder1_txt_username", function () {
+      var mem_name = $(this).val();
+      $('#ContentPlaceHolder1_lab_bankname').val(mem_name);
+    })
+  });
+
+  //Loading and removing content
+  $("#tab_f").click(function () {
+    $('#payment_one').empty();
+    $('#payment_firm').load('form_content/payment_firm.html');
+  });
+  $("#tab_p").click(function () {
+    $('#payment_firm').empty();
+    $('#payment_one').load('form_content/payment_one.html');
+  });
+
+  //see pwd
+  var pwd = document.getElementById("ContentPlaceHolder1_txt_password");
+  var eye = document.getElementById("eye");
+  var pwd2 = document.getElementById("ContentPlaceHolder1_txt_password_again");
+  var eye2 = document.getElementById("eye2");
+  var flag = 0;
+  eye.onclick = function(){
+    if(flag == 0){
+      pwd.type = "text";
+      eye.style.background = "url(share/icons/eye_no.svg) center /100% no-repeat";
+      flag = 1;
+    } else{
+      pwd.type = "password";
+      eye.style.background = "url(share/icons/eye.svg) center /100% no-repeat";
+      flag = 0;
+    }
+  }
+  eye2.onclick = function(){
+    if(flag == 0){
+      pwd2.type = "text";
+      eye2.style.background = "url(share/icons/eye_no.svg) center /100% no-repeat";
+      flag = 1;
+    } else{
+      pwd2.type = "password";
+      eye2.style.background = "url(share/icons/eye.svg) center /100% no-repeat";
+      flag = 0;
+    }
+  }
+  </script>
+
+  <script>
+    $.validator.setDefaults({
+      submitHandler: function() {
+        $('#submit').attr("disabled","true"); //Prevent duplicate submissions
+        $('.sec01').css('display','none');
+        $('.sec02').css('display','none');
+        $('.sec03').css('display','block');
+      }
+    });
+
+    $().ready(function() {
+      // validate signup form on keyup and submit
+      $("#msform").validate({
+        rules: {
+          ctl00$ContentPlaceHolder1$txt_username: {
+            required: true,
+            Chinese: true,
+            minlength:"2",
+          },
+          ctl00$ContentPlaceHolder1$txt_userid_FIRM: {
+            required: true,
+            digits: true,
+            rangelength: [8, 8],
+            guiNB: true,
+            remote: "JoinusCompany.aspx",
+          },
+          ctl00$ContentPlaceHolder1$txt_userid_ONE: {
+            required: true,
+            IDcard: true,
+            IDCard: true,
+            remote: "JoinusCompany.aspx",
+          },
+          ctl00$ContentPlaceHolder1$txt_tax: {
+            required: true,
+            rangelength: [9, 9],
+            onChinese: true,
+          },
+          ctl00$ContentPlaceHolder1$txt_tel: {
+            required: true,
+            Landline: true,
+          },
+          ctl00$ContentPlaceHolder1$txt_emailcontact: {
+            required: true,
+            email: true
+          },
+          ctl00$ContentPlaceHolder1$txt_telpcontact: {
+            required: true,
+            twMobilePhone: true,
+          },
+          ctl00$ContentPlaceHolder1$txt_telcontact: {
+            Landline: true,
+          },
+          ctl00$ContentPlaceHolder1$txt_fax: {
+            Landline: true,
+          },
+          ctl00$ContentPlaceHolder1$txt_nameregist: {
+            required: true,
+            Chinese: true,
+            minlength:"2",
+          },
+          ctl00$ContentPlaceHolder1$txt_nameContact:{
+            required: true,
+            Chinese: true,
+            minlength:"2",
+          },
+          ctl00$ContentPlaceHolder1$ddl_City: "required",
+          ctl00$ContentPlaceHolder1$ddl_Area: "required",
+          ctl00$ContentPlaceHolder1$ddl_Road: "required",
+          ctl00$ContentPlaceHolder1$ddl_Rno: "required",
+          ctl00$ContentPlaceHolder1$txt_idregist: {
+            required: true,
+            IDcard: true,
+            IDCard: true,
+          },
+          ctl00$ContentPlaceHolder1$ddl_mcc: "required",
+          ctl00$ContentPlaceHolder1$txt_password: {
+            required: true,
+            noChinese: true,
+            rangelength: [8, 20],
+          },
+          ctl00$ContentPlaceHolder1$txt_password_again: {
+            required: true,
+            equalTo: "#ContentPlaceHolder1_txt_password"
+          },
+          ctl00$ContentPlaceHolder1$ddl_BankType: "required",
+          ctl00$ContentPlaceHolder1$ddl_BankCode: "required",
+          ctl00$ContentPlaceHolder1$ddl_BranchCode: "required",
+          ctl00$ContentPlaceHolder1$txt_bankaccountno: {
+            required: true,
+            rangelength: [8, 16],
+            digits: true
+          },
+          IsReaded: "required",
+        },
+        messages: {
+          ctl00$ContentPlaceHolder1$txt_username: {
+            minlength:"名稱長度過短",
+          },
+          ctl00$ContentPlaceHolder1$txt_userid_FIRM: {
+            digits: "統編為數字",
+            rangelength: "統編長度8碼",
+          },
+          ctl00$ContentPlaceHolder1$txt_tax: {
+            rangelength:"稅籍編號格式不正確",
+          },
+          ctl00$ContentPlaceHolder1$txt_fax: {
+            Landline:"傳真格式不正確",
+          },
+          ctl00$ContentPlaceHolder1$txt_nameregist: {
+            minlength:"姓名至少2個字",
+          },
+          ctl00$ContentPlaceHolder1$txt_nameContact: {
+            minlength:"姓名至少2個字",
+          },
+          ctl00$ContentPlaceHolder1$ddl_City: "居住縣市為必選",
+          ctl00$ContentPlaceHolder1$ddl_Area: "先選擇縣市再選擇此項",
+          ctl00$ContentPlaceHolder1$ddl_Road: "先選擇區域再選擇此項",
+          ctl00$ContentPlaceHolder1$ddl_Rno: "先選擇路名再選擇此項",
+          ctl00$ContentPlaceHolder1$ddl_mcc: "商品為必選",
+          ctl00$ContentPlaceHolder1$txt_password: {
+            rangelength:"密碼長度8-20碼"
+          },
+          ctl00$ContentPlaceHolder1$txt_password_again: {
+            equalTo:"請重複相同密碼"
+          },
+          ctl00$ContentPlaceHolder1$ddl_BankType: "匯款機構為必選",
+          ctl00$ContentPlaceHolder1$ddl_BankCode: "先選擇機構再選擇此項",
+          ctl00$ContentPlaceHolder1$ddl_BranchCode: "先選擇銀行再選擇此項",
+          ctl00$ContentPlaceHolder1$txt_bankaccountno: {
+            rangelength: "帳號長度不正確",
+          },
+          IsReaded: "請勾選同意會員條款",
+        }
+      });
+
+    });
+	</script>
+
+  <body>
+<html>

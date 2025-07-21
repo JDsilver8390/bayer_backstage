@@ -1,0 +1,39 @@
+/*nav */
+.uk-nav-primary .TXN {
+  background: linear-gradient(to top,#b5c998,#f5ffe5) !important;
+  border-radius: 16px;
+}
+.uk-nav-primary .TXN > a {
+  color: #649719 !important;
+}
+.uk-nav-primary .TXN::before {
+  background: linear-gradient(to top,#b5c998,#f5ffe5);
+}
+
+/*table*/
+main .uk-table{
+  min-width: 1200px;
+}
+.tableBox button[uk-toggle]{
+  position: fixed;
+  z-index: 1000;
+  top:80%;
+  width: 20px;
+  border: none;
+  padding: 0 25px 0 10px;
+  line-height: 25px;
+}
+.tiWidth-2{min-width: 35px}
+.tiWidth-4{min-width: 70px}
+
+/*notification*/
+.uk-notification{z-index: 10200;}
+
+/*rwd-max   */
+@media screen and (max-width:640px){
+  main .uk-table{min-width: 1080px;}
+  .tiWidth-2{min-width: 30px}
+  .tiWidth-4{min-width: 60px}
+}
+
+

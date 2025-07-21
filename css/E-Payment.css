@@ -1,0 +1,80 @@
+/*all*/
+
+/*nav */
+.uk-nav-primary .EPAY {
+  background: linear-gradient(to top,#b5c998,#f5ffe5) !important;
+  border-radius: 16px;
+}
+.uk-nav-primary .EPAY > a {
+  color: #649719 !important;
+}
+.uk-nav-primary .EPAY::before {
+  background: linear-gradient(to top,#b5c998,#f5ffe5)
+}
+
+/*uk-subnav*/
+.uk-subnav{margin-left: 0;}
+.uk-subnav > * {margin-right: 10px;padding: 0 5px;line-height: 20px;}
+.uk-subnav .uk-button-default:active,
+.uk-subnav .uk-button-default:hover,
+.uk-subnav .uk-button-default:focus{
+  background-color: #eee;
+  color: #000;
+  border-color: transparent;
+}
+.uk-button-default{font-size: 1rem;}
+
+/*Status icon */
+.yesImg, .noImg{
+  background:center / 100% no-repeat;
+  width: 80px;height: 80px;
+}
+.yesImg{background-image: url(../images/payYes.svg)}
+.noImg{background-image: url(../images/payNo.svg)}
+
+/*list */
+.listBox{
+  width: 85%;border-radius: 15px;max-width: 1600px;
+  background: url(../images/bg_04.jpg) center / cover;
+}
+.listBox p{margin: 0;}
+.listCont{
+  min-width: 1000px;margin: 10px 0;
+  display:flex; align-items: stretch;
+}
+.projectB{width: 45%;}
+.projectXS{width: 5%;min-width: 100px}
+.projectS{width: 12%;min-width: 120px}
+.projectM{width: 18%;min-width: 180px}
+.bookmark{max-width: 1600px;}
+.btn{position: relative;}
+.btn button{
+  position: absolute;
+  top:50%;transform: translateY(-50%);
+  padding: 0 2px;min-width: 60px
+}
+
+/*rwd-max */
+@media screen and (max-width:1200px){
+  
+}
+@media screen and (max-width:960px){
+  
+}
+@media screen and (max-width:640px){
+  .yesImg, .noImg{width: 60px;height: 60px;}
+  .listCont{min-width: 700px}
+  .projectXS{min-width: 70px}
+  .projectS{min-width: 90px}
+  .projectM{width: 10%;min-width: 120px}
+}
+@media screen and (max-width:430px){
+  
+}
+@media screen and (max-width:350px){
+  .uk-subnav > * {margin-top: 5px}
+  header small{font-size: 1rem;}
+  header h1{line-height: .5}
+}
+
+

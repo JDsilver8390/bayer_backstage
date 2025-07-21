@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.953" height="110" viewBox="0 0 121.953 110">
+  <defs>
+    <filter id="联合_48" x="3" y="7" width="118.953" height="100.001" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_1173" data-name="组 1173" transform="translate(-461 -40)">
+    <rect id="矩形_6243" data-name="矩形 6243" width="120" height="110" transform="translate(461 40)" fill="none"/>
+    <g id="组_1164" data-name="组 1164" transform="translate(0.5 6.5)">
+      <g id="组_1034" data-name="组 1034" transform="translate(-1043.5 -328.5)">
+        <g transform="matrix(1, 0, 0, 1, 1504, 362)" filter="url(#联合_48)">
+          <path id="联合_48-2" data-name="联合 48" d="M2708-1930.5a41,41,0,0,1,41-41,41.018,41.018,0,0,1,39.009,28.343,3.087,3.087,0,0,1,.48.223l18.953,10.831a3,3,0,0,1,0,5.209l-18.953,10.831a2.994,2.994,0,0,1-1.251.391A41.016,41.016,0,0,1,2749-1889.5,41,41,0,0,1,2708-1930.5Z" transform="translate(-2698 1985.5)" fill="#cfcfcf"/>
+        </g>
+      </g>
+      <g id="Layer_2" data-name="Layer 2" transform="translate(486.306 62.306)">
+        <g id="invisible_box" data-name="invisible box">
+          <rect id="矩形_1807" data-name="矩形 1807" width="50" height="50" transform="translate(0.194 0.194)" fill="none"/>
+        </g>
+        <g id="Layer_4" data-name="Layer 4" transform="translate(2.075 3.133)">
+          <path id="路径_366" data-name="路径 366" d="M47.56,23.576,26.565,3.631a1.995,1.995,0,0,0-2.939,0L2.631,23.576a2.1,2.1,0,0,0-.1,2.939,2.2,2.2,0,0,0,3.044,0l.63-.525V43.941A3.149,3.149,0,0,0,9.349,47.09H40.842a3.149,3.149,0,0,0,3.149-3.149V25.99l.63.525a2.1,2.1,0,0,0,1.47.63,2.309,2.309,0,0,0,1.575-.63A2.1,2.1,0,0,0,47.56,23.576ZM31.394,30.294H27.2v4.2a2.1,2.1,0,1,1-4.2,0v-4.2H18.8a2.1,2.1,0,0,1,0-4.2H23V21.9a2.1,2.1,0,1,1,4.2,0v4.2h4.2a2.1,2.1,0,1,1,0,4.2Z" transform="translate(-1.976 -2.985)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

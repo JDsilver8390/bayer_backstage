@@ -1,0 +1,98 @@
+/*all*/
+.bg-lnrG{
+  background: linear-gradient(to right,#62A848,#4A8235);
+}
+.uk-subnav{
+  width: 254px;
+  margin: auto;
+}
+.uk-switcher,.sharedInputs{max-width: 1200px;}
+
+/*form */
+.uk-form-controls{position: relative;}
+form svg{margin-right: 5px;}
+form{max-width: 1200px;margin: auto;}
+.addr {width: 49.5%;}
+fieldset{
+  border: 1px solid #649719;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto 50px auto;
+  max-width: 1000px;
+}
+legend{
+  width: 80%;font-size:1.5em;
+  border-radius: 50px;
+}
+.enter{margin:10px 5px 25px 5px !important;}
+.enter svg{color:#649719;fill:#649719;}
+.agreement{
+  margin-top: 10px;
+  position: relative;
+  max-width: 400px;margin: 0 auto 20px auto;
+}
+.agreement p{margin: 0;color: #999;}
+
+.uk-light .uk-select,
+.uk-light .uk-select:focus{
+  background-color:#3C3C3C;color:#fff;
+}
+.uk-light .uk-select option{color:#fff !important;}
+.uk-light .uk-select:disabled{
+  background-color: #f8f8f8;
+  color: #999;
+  border-color: #e5e5e5;
+}
+
+.uk-checkbox{
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 5px;
+  vertical-align:middle !important;
+  min-height: 0 !important;
+  border: 1px solid #999;
+}
+.uk-alert-primary{max-width: 1000px;margin: 0 auto 20px auto }
+
+/*sec03*/
+.sec03{display: none}
+.sec03>div{
+  border-radius: 20px 0 20px 0;margin-top: 20px
+}
+.sec03 h1{color:#649719;font-weight: 600;text-shadow: 3px 3px 5px #ffffff;}
+.sec03 h2{margin: 0;color:#649719}
+
+/*pn_eye*/
+.pn_eye{margin-right: 5px;}
+
+/*error*/
+.formbox label.error{
+  position: absolute;text-align: right;top: 38px;right:0;
+  color: red;width: 100%;
+}
+.formbox .agreement label.error{top: 50px;}
+
+/*rwd-max */
+@media screen and (max-width:960px){
+  .uk-form-horizontal .uk-form-label {margin-bottom: 0px;}
+}
+@media screen and (max-width:640px){
+  h3{font-size: 1.2rem}
+  .addr {width: 100%;}
+  .sec02{padding: 10px }
+  .formbox{padding: 30px 10px;}
+  legend{width: 90%;padding: 5px;}
+  fieldset{padding: 10px}
+  .formbox label.error{top:45px}
+}
+@media screen and (max-width:430px){
+  .sec03 h1{font-size: 1.5rem}
+  .sec03 h2{font-size: 1.2rem}
+  .sec03 .uk-padding{padding: 10px}
+}
+@media screen and (max-width: 358px) {
+  .formbox .agreement label.error{top: 70px;}
+}
+@media screen and (max-width: 298px) {
+  .formbox .CaptchaBox label.error{top: 60px;}
+}

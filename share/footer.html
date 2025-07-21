@@ -1,0 +1,122 @@
+<style>
+/* 回最上方 */
+.scrollTop{
+  position: fixed;
+  bottom:150px;
+  right:50px;
+  z-index: 979;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  color:#649719;font-weight:bold;
+  background-color: #d1e0ba;
+}
+.scrollTop:hover{
+  background-color: #fff;
+  transition: all 0.2s;
+}
+.in-out{
+  animation-name: uk-fade-bottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+  
+/* footer區 */
+.footer{
+  max-width: 1200px;
+  padding: 12px;
+  margin: auto;
+}
+.footer a{
+  text-decoration:underline;
+}
+.footer p{
+  margin: 10px 0;  
+}
+
+@media screen and (max-width: 1200px){
+  .footer{height: auto;max-width: 960px;}
+}
+@media screen and (max-width: 960px){
+  .footer{max-width: 700px;}
+}
+@media screen and (max-width: 640px){
+  .footer{max-width: 350px;}
+  /* 回最上方 */
+  .scrollTop{right: 20px;}
+}
+@media screen and (max-width: 430px){
+  .textCenter{max-width: 320px;}
+}
+
+</style>
+
+
+<!-- footer html -->
+  <div class="footer">
+    <p class="uk-text-center">Copyright © 2023 晶嶼科技 版權所有</p>
+  </div>
+  
+<!-- goto-top html ============-->
+<a class="uk-icon-button scrollTop in-out" uk-totop uk-scroll style="display: none;"></a>
+
+<script>
+// scroll ==========
+  // goto-top
+    $(window).scroll(function(){
+      if($(window).scrollTop()>=100){
+      $(".in-out").show();
+      }else{
+        $(".in-out").hide();
+      }
+    });
+      
+//loading
+  $(window).on('load', function(){
+    $('#loading').fadeOut();
+  });
+  //時間限制
+  $(document).ready(function(){
+    setTimeout( function(){ $('#loading').fadeOut(); },2500)
+  });
+</script>
+
+<script>
+//  IOS change scrollbarBox class ===========================
+  if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+    $('.scrollR').css({
+      borderBottom: '2px solid #8efffb',
+      borderTop: '2px solid #8efffb',
+      borderLeft: '2px solid #8efffb',
+      borderRight: '2px dashed #8efffb',
+      boxShadow:'0 0 10px rgba(0, 0, 0, 0.1)',
+    });
+    $('.scrollD').css({
+      borderBottom: '2px dashed #8efffb',
+      borderTop: '2px solid #8efffb',
+      borderLeft: '2px solid #8efffb',
+      borderRight: '2px solid #8efffb',
+      boxShadow:'0 0 10px rgba(0, 0, 0, 0.1)',
+    });
+    $('.scrollRD').css({
+      borderBottom: '2px dashed #8efffb',
+      borderTop: '2px solid #8efffb',
+      borderLeft: '2px solid #8efffb',
+      borderRight: '2px dashed #8efffb',
+      boxShadow:'0 0 10px rgba(0, 0, 0, 0.1)',
+    });
+  }
+  
+  //  Phone change date css ===========================
+  if( /iPhone|iPad|iPod|Android|Android Pad/i.test(navigator.userAgent) ) {
+    $('input[type="date"]').css({
+      borderBottom: '2px solid #8efffb',
+      borderTop: '2px solid #8efffb',
+      borderLeft: '2px solid #8efffb',
+      borderRight: '2px dashed #8efffb',
+      boxShadow:'0 0 10px rgba(0, 0, 0, 0.1)',
+    });
+    
+  }
+  
+</script>
+
+

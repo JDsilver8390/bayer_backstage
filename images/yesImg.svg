@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g data-name="组 1182" id="组_1182">
+   <rect data-name="矩形 6247" fill="none" height="80" id="矩形_6247" transform="translate(-7971 1311)" width="80" x="7971" y="-1311"/>
+   <g data-name="组 1180" id="组_1180">
+    <circle cx="40.5" cy="39.5" data-name="椭圆 379" fill="#ffffff" id="椭圆_379" r="32.5" transform="matrix(1 0 0 1 0 0)"/>
+    <g data-name="Layer 2" id="Layer_2">
+     <g data-name="invisible box" id="invisible_box" transform="translate(0.17 0.17)">
+      <rect data-name="矩形 794" fill="none" height="72" id="矩形_794" width="72" x="3.83" y="3.83"/>
+     </g>
+     <g data-name="icons Q2" id="icons_Q2" transform="translate(3.055 3.055)">
+      <path d="m38.94,11.85a27.09,27.09 0 1 1 -27.09,27.1a27.09,27.09 0 0 1 27.09,-27.1m0,-6.02a32.96,32.96 0 1 0 23.46,9.66a33.11,33.11 0 0 0 -23.46,-9.66z" data-name="路径 337" fill="#00bb19" id="路径_337" transform="translate(-2 -2)"/>
+      <path d="m25.76,44.92l-9.03,-8.88a3.16,3.16 0 0 1 -0.3,-4.06a2.86,2.86 0 0 1 4.52,-0.3l6.92,6.92l18.97,-18.97a3.01,3.01 0 0 1 4.21,4.22l-21.07,21.07a2.86,2.86 0 0 1 -4.22,0z" data-name="路径 338" fill="#00bb19" id="路径_338" transform="translate(3.053 4.669)"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

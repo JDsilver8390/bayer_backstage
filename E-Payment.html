@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>電子帳單|晶嶼消費者後台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="robots" content="None, Noimageindex,Noarchive">
+  <meta name="description" content="晶嶼科技-e-payment電子帳單，已繳與未繳記錄。">
+  <!-- Font type -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700" rel="stylesheet">
+  <!-- browser thumbnail -->
+  <link rel="shortcut icon" href="share/Logo.png">
+  <link rel="apple-touch-icon" href="share/Logo.png">
+  <!-- framework css -->
+  <link rel="stylesheet" href="uikit_3.6.22/uikit-pn.min.css">
+  <!-- page css -->
+  <link rel="stylesheet" href="css/share.css">
+  <link rel="stylesheet" href="css/E-Payment.css">
+
+</head>
+
+<body class="scrollbar">
+<header class="header bg-lnrO uk-text-center sdw-d">
+  <img src="images/ePay.png" alt="">
+  <h1 class="tx-w">電子帳單<small>(E-Payment)</small></h1>
+</header>
+
+<nav class="bg-lk uk-light uk-text-center scrollbar"></nav>
+
+<main id="main">
+
+  <div class="scr-nav">
+    <div class="uk-navbar-nav">
+      <div class="uk-grid-small uk-form-horizontal" uk-grid>
+        <div class="serchName">
+          <p>篩選:</p>
+        </div>
+        <div class="uk-subnav">
+          <button class="uk-button uk-button-default uk-button-small rds5">全部</button>
+          <button class="uk-button uk-button-default uk-button-small rds5">未繳款</button>
+          <button class="uk-button uk-button-default uk-button-small rds5">已繳款</button>
+        </div>
+      </div>
+      <div class="uk-inline">
+        <button class="uk-button uk-button-default uk-button-small rds5 searchBtn">篩選查詢</button>
+        <div uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-top-small; duration: 300; ">
+          <div class="uk-card bg-w sdw uk-padding-small rds15">
+            <h4 class="uk-text-center uk-text-bold">進階篩選查詢</h4>
+            <form class="uk-form-horizontal">
+            <div class="uk-child-width-1-2@s" uk-grid>
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="">合作商訂單編號</label>
+                <div class="uk-form-controls">
+                  <input class="uk-input " id="" name="" type="text" />
+                </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="">帳單交易金額</label>
+                <div class="uk-form-controls">
+                  <input class="uk-input" id="" name="" type="number" />
+                </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="from">帳單寄出日期</label>
+                <div class="uk-form-controls">
+                 <div class="uk-inline uk-width1-1 dtSel">
+                  <input class="uk-input uk-light" id="from" name="from" type="date" max="to" />
+                  <span>到</span>
+                  <input class="uk-input uk-light" id="to" name="to" type="date" min="from" />
+                 </div>
+                </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="inputBox">
+                <label class="uk-form-label uk-light" for="">合作商名稱</label>
+                <div class="uk-form-controls">
+                  <input class="uk-input" id="" name="" type="text" />
+                </div>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="uk-text-center uk-margin-remove-bottom YesNo">
+              <button class="uk-button uk-button-default rds50 uk-margin-small-bottom" type="reset">清除全部</button>
+              <button class="uk-button pn-btn-main rds50 uk-margin-small-bottom" type="submit">確定查詢</button>
+            </p>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="overview uk-text-center uk-margin-large">最多顯示2年內資料</h3>
+  <div>
+    <div class="listBox uk-overflow-auto scrollbar scrollR uk-align-center sdw uk-padding-small">
+     <div class="listCont">
+       <div class="tx-r uk-text-center Center">
+          <div class="noImg"></div>
+          <p>未繳款</p>
+       </div>
+       <div class="bg-w rds15 uk-flex uk-padding-small uk-width-expand uk-box-shadow-small">
+        <div class="projectXS btn">
+          <a href="bill.html"><button class="pn-button pn-btn-mainBox pn-button-small rds5">去繳款</button></a>
+        </div>
+        <div class="projectM">
+          <p>合作商訂單編號</p>
+          <p class="uk-text-bold">1234567890123</p>
+        </div>
+        <div class="projectS">
+          <p>帳單金額</p>
+          <p class="tx-r">111,800</p>
+        </div>
+        <div class="projectS">
+          <p>到期日</p>
+          <p class="tx-g">2021/12/05</p>
+        </div>
+        <div class="projectS">
+          <p>帳單寄出日</p>
+          <p>2021/12/05</p>
+        </div>
+        <div class="projectB">
+          <p>商店名稱</p>
+          <p>雲穀寵物館</p>
+        </div>
+       </div>
+     </div>
+     <div class="listCont">
+       <div class="tx-r uk-text-center Center">
+         <div class="noImg"></div>
+         <p>未繳款</p>
+       </div>
+       <div class="bg-w rds15 uk-flex uk-padding-small uk-width-expand uk-box-shadow-small">
+        <div class="projectXS btn">
+          <a href="bill.html"><button class="pn-button pn-btn-mainBox pn-button-small rds5">去繳款</button></a>
+        </div>
+        <div class="projectM">
+          <p>合作商訂單編號</p>
+          <p class="uk-text-bold">1234567890123</p>
+        </div>
+        <div class="projectS">
+          <p>帳單金額</p>
+          <p class="tx-r">111,800</p>
+        </div>
+        <div class="projectS">
+          <p>到期日</p>
+          <p class="tx-g">2021/12/05</p>
+        </div>
+        <div class="projectS">
+          <p>帳單寄出日</p>
+          <p>2021/12/05</p>
+        </div>
+        <div class="projectB">
+          <p>商店名稱</p>
+          <p>雲穀寵物館</p>
+        </div>
+       </div>
+     </div>
+     <div class="listCont">
+       <div class="tx-r uk-text-center Center">
+         <div class="noImg"></div>
+         <p>未繳款</p>
+       </div>
+       <div class="bg-w rds15 uk-flex uk-padding-small uk-width-expand uk-box-shadow-small">
+        <div class="projectXS btn">
+          <a href="bill.html"><button class="pn-button pn-btn-mainBox pn-button-small rds5">去繳款</button></a>
+        </div>
+        <div class="projectM">
+          <p>合作商訂單編號</p>
+          <p class="uk-text-bold">1234567890123</p>
+        </div>
+        <div class="projectS">
+          <p>帳單金額</p>
+          <p class="tx-r">111,800</p>
+        </div>
+        <div class="projectS">
+          <p>到期日</p>
+          <p class="tx-g">2021/12/05</p>
+        </div>
+        <div class="projectS">
+          <p>帳單寄出日</p>
+          <p>2021/12/05</p>
+        </div>
+        <div class="projectB">
+          <p>商店名稱</p>
+          <p>雲穀寵物館</p>
+        </div>
+       </div>
+     </div>
+     <div class="listCont">
+       <div class="tx-b uk-text-center Center">
+         <div class="yesImg"></div>
+         <p>已繳款</p>
+       </div>
+       <div class="bg-w rds15 uk-flex uk-padding-small uk-width-expand uk-box-shadow-small">
+        <div class="projectXS btn">
+          <a href="bill.html"><button class="uk-button uk-button-default uk-button-small rds5" disabled>去繳款</button></a>
+        </div>
+        <div class="projectM">
+          <p>合作商訂單編號</p>
+          <p class="uk-text-bold">1234567890123</p>
+        </div>
+        <div class="projectS">
+          <p>帳單金額</p>
+          <p class="tx-r">111,800</p>
+        </div>
+        <div class="projectS">
+          <p>到期日</p>
+          <p class="tx-g">2021/12/05</p>
+        </div>
+        <div class="projectS">
+          <p>帳單寄出日</p>
+          <p>2021/12/05</p>
+        </div>
+        <div class="projectB">
+          <p>商店名稱</p>
+          <p>雲穀寵物館</p>
+        </div>
+       </div>
+     </div>
+     <div class="listCont">
+       <div class="tx-b uk-text-center Center">
+         <div class="yesImg"></div>
+         <p>已繳款</p>
+       </div>
+       <div class="bg-w rds15 uk-flex uk-padding-small uk-width-expand uk-box-shadow-small">
+        <div class="projectXS btn">
+          <a href="bill.html"><button class="uk-button uk-button-default uk-button-small rds5" disabled>去繳款</button></a>
+        </div>
+        <div class="projectM">
+          <p>合作商訂單編號</p>
+          <p class="uk-text-bold">1234567890123</p>
+        </div>
+        <div class="projectS">
+          <p>帳單金額</p>
+          <p class="tx-r">111,800</p>
+        </div>
+        <div class="projectS">
+          <p>到期日</p>
+          <p class="tx-g">2021/12/05</p>
+        </div>
+        <div class="projectS">
+          <p>帳單寄出日</p>
+          <p>2021/12/05</p>
+        </div>
+        <div class="projectB">
+          <p>商店名稱</p>
+          <p>雲穀寵物館</p>
+        </div>
+       </div>
+     </div>
+    </div>
+
+    <div class="bookmark uk-align-center">
+      <ul class="uk-pagination uk-flex-center" uk-margin>
+        <li><a href="#"><span uk-pagination-previous></span></a></li>
+        <li><a href="#">1</a></li>
+        <li class="uk-disabled"><span>...</span></li>
+        <li><a href="#">5</a></li>
+        <li class="uk-active"><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li class="uk-disabled"><span>...</span></li>
+        <li><a href="#"><span>10</span></a></li>
+        <li><a href="#"><span uk-pagination-next></span></a></li>
+      </ul>
+      <div class="uk-position-center-left">
+        <span>共:100筆/總頁數:10</span>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!--load html start-->
+  <footer></footer>
+<!--load html end-->
+
+  <!--   framework script -->
+  <script src="uikit_3.6.22/uikit-pn.min.js"></script>
+  <script src="uikit_3.6.22/uikit-icons-pn.min.js"></script>
+  <!-- jqurey -->
+  <script src="share/jquery-3.6.0.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    //load .html
+    $('nav').load('share/nav.html');
+    $('footer').load('share/footer.html');
+  });
+
+  //  Phone change date css ===========================
+  if( /iPhone|iPad|iPod|Android|Android Pad/i.test(navigator.userAgent) ) {
+    $('input[type="date"]').css({
+      color: '#fff',
+      'line-height': '40px',
+    });
+    $('input[type="date"]').addClass("mobleDate");
+      $('input[type="date"]').blur(function(){
+      if(this.value == ''){
+        $(this).addClass("mobleDate");
+      }
+    });
+      $('input[type="date"]').focus(function(){
+        $(this).removeClass("mobleDate");
+    });
+      $('button[type="reset"]').click(function(){
+        $('input[type="date"]').addClass("mobleDate");
+    });
+  }
+
+  </script>
+
+  <script>
+    // max get today date
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    if(dd<10){
+            dd='0'+dd
+        }
+        if(mm<10){
+            mm='0'+mm
+        }
+    today = yyyy+'-'+mm+'-'+dd;
+    document.getElementById("to").setAttribute("max", today);
+    document.getElementById("from").setAttribute("max", today);
+
+    //change input date max min
+    $('#from, #to').on('change', function(){
+      $('#from').attr('max', $('#to').val());
+      $('#to').attr('min', $('#from').val());
+
+    });
+  </script>
+
+  <body>
+<html>

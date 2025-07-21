@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.835" height="110" viewBox="0 0 121.835 110">
+  <defs>
+    <filter id="联合_49" x="3" y="7" width="118.835" height="100.001" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_1174" data-name="组 1174" transform="translate(-602 -40)">
+    <rect id="矩形_6244" data-name="矩形 6244" width="120" height="110" transform="translate(602 40)" fill="none"/>
+    <g id="组_1165" data-name="组 1165" transform="translate(9.5 6.5)">
+      <g id="组_1035" data-name="组 1035" transform="translate(-1078.618 -328.5)">
+        <g transform="matrix(1, 0, 0, 1, 1671.12, 362)" filter="url(#联合_49)">
+          <path id="联合_49-2" data-name="联合 49" d="M2743.118-1930.5a41,41,0,0,1,41-41,41.018,41.018,0,0,1,39.025,28.4,3.12,3.12,0,0,1,.344.17l18.953,10.831a3,3,0,0,1,0,5.209l-18.953,10.831a3,3,0,0,1-1.128.378,41.013,41.013,0,0,1-38.242,26.187A41,41,0,0,1,2743.118-1930.5Z" transform="translate(-2733.12 1985.5)" fill="#cfcfcf"/>
+        </g>
+      </g>
+      <g id="Layer_2" data-name="Layer 2" transform="translate(607.277 62.075)">
+        <g id="invisible_box" data-name="invisible box" transform="translate(0 0)">
+          <rect id="矩形_1808" data-name="矩形 1808" width="47" height="46" transform="translate(0.105 0.425)" fill="none"/>
+        </g>
+        <g id="icons_Q2" data-name="icons Q2" transform="translate(5.575 2.6)">
+          <g id="组_1026" data-name="组 1026">
+            <path id="路径_367" data-name="路径 367" d="M23.908,3A10.908,10.908,0,1,0,34.816,13.908,10.908,10.908,0,0,0,23.908,3Z" transform="translate(-6.059 -1)" fill="#fff"/>
+            <path id="路径_368" data-name="路径 368" d="M39.716,44.866H7.983A1.983,1.983,0,0,1,6,42.883V34.454l.892-.595A31.831,31.831,0,0,1,23.849,29a31.038,31.038,0,0,1,16.957,4.958l.892.5v8.429A1.983,1.983,0,0,1,39.716,44.866ZM9.967,40.9H37.732V36.735a27.27,27.27,0,0,0-13.883-3.768A28.162,28.162,0,0,0,9.967,36.636Z" transform="translate(-6 -3.218)" fill="#fff"/>
+            <path id="路径_369" data-name="路径 369" d="M39.716,44.866H7.983A1.983,1.983,0,0,1,6,42.883V34.454l.892-.595A31.831,31.831,0,0,1,23.849,29a31.038,31.038,0,0,1,16.957,4.958l.892.5v8.429A1.983,1.983,0,0,1,39.716,44.866Z" transform="translate(-6 -3.218)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Layer_2-2" data-name="Layer 2" transform="translate(648.803 81.241)">
+        <g id="invisible_box-2" data-name="invisible box" transform="translate(0 0)">
+          <rect id="矩形_1809" data-name="矩形 1809" width="28" height="27" transform="translate(-0.421 0.259)" fill="none"/>
+        </g>
+        <g id="Q3_icons" data-name="Q3 icons" transform="translate(2.035 5.577)">
+          <g id="组_1027" data-name="组 1027" transform="translate(0 0)">
+            <path id="路径_370" data-name="路径 370" d="M26.433,8H19.349v2.361a3.542,3.542,0,1,1-7.084,0V8H5.181A1.181,1.181,0,0,0,4,9.181V32.168a1.181,1.181,0,0,0,1.181,1.181H26.433a1.181,1.181,0,0,0,1.181-1.181V9.181A1.181,1.181,0,0,0,26.433,8Z" transform="translate(-4 -13.277)" fill="#fff"/>
+            <path id="路径_371" data-name="路径 371" d="M8.181,12.361h17.71a1.181,1.181,0,0,0,0-2.361H8.181a1.181,1.181,0,1,0,0,2.361Z" transform="translate(-5.229 -20)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
