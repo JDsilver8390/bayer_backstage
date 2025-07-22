@@ -16,7 +16,7 @@ a[uk-slider-item]{
   width: 80%;margin: 30px 2% 50px 2%;
   float: right;
   display: flex;align-items: center;justify-content: center;
-  background: url("../images/bg_main.jpg") center / cover ;
+  background: url("../images/bg_main.png") center / cover ;
 }
 .headerBig h1{font-size: 5rem}
 
